@@ -63,3 +63,61 @@ python3 descr-stats.py
 python3 descr-stats.py
 Mean of list 1 = 3.0
 Mean of list 2 = 5.0
+3) Git log for v1.0
+commit 775d65c4c77f6765dc81bbde4309718f58fa1865
+Author: Xavier Walden <walde154@umn.edu>
+Date:   Thu Oct 1 23:30:27 2020 -0500
+
+    mean calculator
+
+commit 416a2000783834cf62332e090d007ca6fc942515
+Author: Xavier Walden <walde154@umn.edu>
+Date:   Thu Oct 1 23:30:03 2020 -0500
+
+    assignment file
+tag v1.0
+Tagger: Xavier Walden <walde154@umn.edu>
+Date:   Thu Oct 1 23:30:31 2020 -0500
+
+Orginal version with mean function
+
+commit 775d65c4c77f6765dc81bbde4309718f58fa1865
+Author: Xavier Walden <walde154@umn.edu>
+Date:   Thu Oct 1 23:30:27 2020 -0500
+
+    mean calculator
+
+diff --git a/descr-stats.py b/descr-stats.py
+new file mode 100644
+index 0000000..c813920
+--- /dev/null
++++ b/descr-stats.py
+@@ -0,0 +1,28 @@
++def mean_stat(list):
++    answer = 0 #Final value
++    count = 0  #number of values
++
++    ##Mean calculation
++    for item in list:
++        answer += item
++        count +=1
++
++    if(answer == 0):
++        answer = "List is Empty"
++        return answer
++    else:
++        answer = answer/count
++        return answer
++
++
++def main():
++    li1 = {1,3,5}
++    li2 = {2,4,6,8}
++    li3 = {}
++
++    print("Mean of list 1 = " +str(mean_stat(li1)))
++    print("Mean of list 2 = " +str(mean_stat(li2)))
++    #print("Mean of list 3 = " +str(mean_stat(li3)))
++
++if __name__ == '__main__':
++    main()
