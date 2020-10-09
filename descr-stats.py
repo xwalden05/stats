@@ -27,6 +27,21 @@ def mean_stat(list):
 
 
 def median_stat(list):
+    """
+    Calculates the median of a given List
+    doctest verifies median is calculated correctly
+
+    >>> median_stat([5,3,17])
+    5
+    >>> median_stat([-7])
+    -7
+    >>> median_stat([11,8,5,2])
+    6.5
+    >>> median_stat([-1,4,.5,2.5])
+    1.5
+    """
+
+    list.sort()
     length = len(list)
     answer = 0
     if(length % 2 == 0):
@@ -40,6 +55,7 @@ def median_stat(list):
 
 
 def main():
+    import statistics
     li1 = [1,3,5]
     li2 = [2,4,6,8]
     li3 = []
