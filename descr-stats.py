@@ -1,4 +1,15 @@
 def mean_stat(list):
+    """
+    Calulates the mean of the list provided.
+    doctest verifies functions are getting correct values
+
+    >>> mean_stat([5,3,17])
+    8.333333333333334
+    >>> mean_stat([5])
+    5.0
+    >>> mean_stat([-1,4,.5,2.5])
+    1.5
+    """
     answer = 0 #Final value
     count = 0  #number of values
 
@@ -13,6 +24,7 @@ def mean_stat(list):
     else:
         answer = answer/count
         return answer
+
 
 def median_stat(list):
     length = len(list)
